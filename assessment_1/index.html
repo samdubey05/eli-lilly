@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="site.css">
+    <script src="image-mapper.js"></script>
+    <title>Assessment 1</title>
+</head>
+<body>
+    <div>
+        <h2>Please Upload the image to map</h2>
+        <input type="file"  id="file" name="image" accept="image/*" onchange="loadFile(event);">
+        <div class="image-container" id="image-container">
+            <img id="output" onclick="handleImageClick(event)"/>
+            <div class="dialog" id="dialog">
+                <h4>Description</h4>
+                <input type="text" id="description-input">
+                <p class="dialog-alert" id="dialog-alert">Please enter description</p>
+                <div class="dialog-buttons"><button class="button save" onclick="handleClickSave(event)">Save</button> <button class="button cancel" onclick="handleClickCancel(event)">Cancel</button></div>
+            </div>
+        </div>
+        <div class="image-properties" id="image-properties">
+           <div><span>Image Name: </span><span id="image-name"></span></div>
+       
+            <div><span>Dimensions: </span><span id="dimensions"></span></div>
+            <div><span>MIME Type: </span><span id="type"></span></div>
+        </div>
+        <table class="table" id="table">
+            <tr>
+                <th>X Pos</th>
+                <th>Y Pos</th>
+                <th>Description</th>
+              </tr>
+        </table>
+        
+    </div>
+</body>
+</html>
